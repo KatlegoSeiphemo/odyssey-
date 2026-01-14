@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
-import 'package:go_router/go_router.dart';
+
 import 'package:provider/provider.dart';
-import 'package:intl/intl.dart';
+
 import 'package:uuid/uuid.dart';
 import 'package:flutter_application_1/services/child_service.dart';
 import 'package:flutter_application_1/services/vaccination_service.dart';
@@ -24,7 +23,7 @@ class VaccinationsScreen extends StatelessWidget {
     }
 
     final child = childService.children.first;
-    final allVaccinations = vaccinationService.vaccinations;
+   
     final dueVaccinations = vaccinationService.getDueVaccinations(child.ageInMonths);
     final upcomingVaccinations = vaccinationService.getUpcomingVaccinations(child.ageInMonths);
 
