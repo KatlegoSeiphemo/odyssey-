@@ -6,5 +6,6 @@ class AppointmentService extends ChangeNotifier {
 
 	Future<void> addAppointment(dynamic appointment) async {}
 	Future<void> updateAppointment(dynamic appointment) async {}
+	Future<void> loadAppointments(String userId) async {}
 }
 
