@@ -7,16 +7,26 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get the AuthService from Provider
     final authService = Provider.of<AuthService?>(context);
 
-    // Minimal behavior for tests/dev: show a placeholder until auth resolves
+    // If AuthService is not ready or the user is not logged in, show a loading spinner
     if (authService == null || !authService.isLoggedIn) {
-      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      return const Scaffold(
+        body: Center(
+          child: CircularProgressIndicator(),
+        ),
+      );
     }
 
-    return const Scaffold(
-      appBar: AppBar(title: Text('Home')),
-      body: Center(child: Text('Home')),
+    // Once logged in, show the main home screen
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'), // const is OK here
+      ),
+      body: const Center(
+        child: Text('Home'), // const is OK here
+      ),
     );
   }
 }

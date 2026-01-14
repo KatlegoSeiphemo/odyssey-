@@ -4,6 +4,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:flutter_application_1/models/child_profile.dart';
+import 'package:flutter_application_1/models/vaccination.dart';
 import 'package:flutter_application_1/models/vaccination_record.dart';
 
 /// Service that generates shareable exports (PDF) for records.
